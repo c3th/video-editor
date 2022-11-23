@@ -66,7 +66,7 @@ fontcolor | String | Color of text
 fontsize  | Number | Size of text
 font      | String | Change font of text
 opacity   | Number | Opacity of text, 0.5 is 50%, 1 is 100%
-shadow_y  | Wild   | While you could use numbers, FFmpeg allows you to use built-in variables, see [here](#positions)
+shadow_y  | Wild   | While you could use numbers, FFmpeg allows you to use built-in variables. See [here](#positions)
 text_y    | Wild   | --
 
 ### Positions
