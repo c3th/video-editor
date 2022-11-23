@@ -47,8 +47,8 @@ fontcolor | String | Color of text
 fontsize  | Number | Size of text
 font      | String | Change font of text
 opacity   | Number | Opacity of text, 0.5 is 50%, 1 is 100%
-shadow_y  | Wild   | While you could use numbers, FFmpeg allows you to use built-in variables, see [here]()
-text_y    | Wild   | -- | --
+shadow_y  | Wild   | While you could use numbers, FFmpeg allows you to use built-in variables, see [here](#positions)
+text_y    | Wild   | --
 
 ### Positions
 Position      | x:y                | With 10 px padding
@@ -62,6 +62,21 @@ Bottom center	| x=(w-text_w)/2:y=h-th         | x=(w-text_w)/2:y=h-th-10
 Bottom right  | x=w-tw:y=h-th                 | x=w-tw-10:y=h-th-10
 
 > Positions table taken from [here](https://stackoverflow.com/questions/17623676/text-on-video-ffmpeg)
+
+### Rendering
+> Before rendering, if you have text added, it's important to concatenate the `video command list` with the `vf command list`, which is shown below.
+```py
+cat = ed.vf.concatenate(ed.video.command)
+ed.render()
+
+# ...
+```
+
+### Output
+> If you have followed my brief examples, you should get something like:
+```
+$ ffmpeg -ss 30 -i /home/matt/video-creator/dist/0omEQq3N96M.mp4 -vf "crop=460:720,drawtext=fontfile=fonts/Creepster-Regular.ttf:text=SPOOPY:enable='between(t,0,5)':fontcolor=#7a0200@0.5:fontsize=20:shadowcolor=black:shadowx=0:shadowy=2:x=(w-tw)/2:y=(h-th)/2+80" -t 5 /home/matt/project/video-creator/dist/edited-0omEQq3N96M.mp4
+```
 
 ## 🔈 Subtitles
 > Subtitles is still in development, but if you'd like to download a transcript from a Youtube video, you can!
@@ -83,4 +98,5 @@ print(transcript)
 * [ ] Get transcript to automatically apply itself to video as voices go
 * [ ] Add images to video
 * [ ] Combine two video into one only changing Y positions
+* [ ] Automate adding text to video instead of concatenating
 * [ ] ...
