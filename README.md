@@ -1,5 +1,5 @@
 ## 🎥 Video Editor (Made Easy)
-> A fully working one-file video editor, originally made for the purpose to automate short videos.
+> A fully automated ffmpeg tool, edit videos, add texts, with ease!
 
 ## 🔧 Cloning
 ```
