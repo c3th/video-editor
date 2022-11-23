@@ -38,8 +38,9 @@ text_logo = ed.vf.drawtext(
   text_y="(h-th)/2+80"
 )
 
-# ...
+
 # Add multiple texts
+
 text_1 = ed.vf.drawtext(
   content="Hello world",
   text_y="(h-th)/2+50",
