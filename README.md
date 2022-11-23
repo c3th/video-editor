@@ -39,6 +39,24 @@ text_logo = ed.vf.drawtext(
 )
 
 # ...
+# Add multiple texts
+text_1 = ed.vf.drawtext(
+  content="Hello world",
+  text_y="(h-th)/2+50",
+  fontsize=33,
+  start_at=1,
+  duration=1
+)
+
+text_2 = ed.vf.drawtext(
+  content="Hello world",
+  text_y="(h-th)/2+50",
+  fontsize=33
+  start_at=3,
+  duration=1
+)
+
+# ...
 ```
 Name      | Type   | Description
 ----------|--------|---------------------------------------------------
