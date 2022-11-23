@@ -100,3 +100,5 @@ print(transcript)
 * [ ] Combine two video into one only changing Y positions
 * [ ] Automate adding text to video instead of concatenating
 * [ ] ...
+
+> Inspired by moviepy <3
