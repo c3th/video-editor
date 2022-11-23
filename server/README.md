@@ -3,7 +3,7 @@
 
 ## ⚙ Usage
 > Server will be displayed on port `5000`, unless you decide to change it that is...
-``
+```
 $ npm i
 $ node server
 ```
