@@ -1,0 +1,68 @@
+
+
+:root {
+    --main-color: #2e2e2e;
+    --menu-color: #171717;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.container {
+    font-family: Arial;
+    color: white;
+}
+
+.container a {
+    color: white;
+}
+
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+
+row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.menu {
+    background-color: var(--menu-color);
+    border-radius: 5px;
+}
+
+.menu h3 {
+    border-bottom: 2px solid var(--main-color);
+    padding: 2vh;
+}
+
+table {
+    width: 100%;
+    padding: 1vh;
+}
+
+th, td {
+    text-align: left;
+}
+
+th {
+    padding: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .column {   
+        width: 100%;
+    }
+}
